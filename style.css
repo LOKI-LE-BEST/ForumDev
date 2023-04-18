@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #555454;
+}
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  box-shadow: inset -10px -10px 15px #6d6c6c,
+    inset 10px 10px 10px rgba(255, 247, 247, 0.1);
+}
+.wrapper::before {
+  content: "";
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  box-shadow: -10px -10px 15px #464545,
+    10px 10px 10px rgb(0, 0, 0);
+}
+span {
+  height: 186px;
+  width: 220px;
+  position: absolute;
+  animation: rotate 3s linear infinite;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+span::before {
+  content: "";
+  position: absolute;
+  height: 30px;
+  border-radius: 50%;
+  width: 30px;
+  background: linear-gradient(45deg, #336dff, #5c89ff);
+  box-shadow: 0px 5px 5px rgb(0, 197, 231);
+}
+*, ::before, ::after {
+  box-sizing: border-box;
+  padding: 3rem;
+  height: 350px;
+  border-radius: 20px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+h1 {
+  font-size: 180px;
+  text-align: center;
+  padding-top: 50px;
+}
+.contenu {
+  padding: 5vw 10vw;
+  font-size: 25px;
+  text-align: justify;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+.scrollbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 0;
+  opacity: 0;
+  background: linear-gradient(to top, #002fff, #1180ff);
+}
+.clickScrollbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 100%;
+  background: rgba(170,170,170,0.356);
+}
